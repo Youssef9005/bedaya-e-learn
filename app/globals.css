@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 250 245 255;
+  --primary-foreground: 79 70 229;
+
+  --secondary: 253 242 248;
+  --secondary-foreground: 219 39 119;
+
+  --accent: 245 243 255;
+  --accent-foreground: 124 58 237;
+
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+
+  --popover: 255 255 255;
+  --popover-foreground: 15 23 42;
+
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+
+  --border: 226 232 240;
+  --input: 226 232 240;
+
+  --ring: 124 58 237;
+
+  --radius: 0.75rem;
+}
+
+body {
+  font-family: var(--font-cairo), sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-purple-700 mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold text-purple-600 mb-4;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-pink-100 text-pink-700 rounded-full shadow-md hover:bg-pink-200 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full p-3 border border-purple-200 rounded-xl focus:ring-2 focus:ring-purple-300 focus:border-transparent outline-none;
+  }
+}
